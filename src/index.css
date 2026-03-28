@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core colors from A Casa dos Arcanjos logo */
+    --background: 0 0% 98%;
+    --foreground: 220 60% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 60% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 60% 8%;
+
+    /* Primary: Light blue from logo */
+    --primary: 210 65% 52%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 65% 65%;
+    --primary-dark: 210 65% 42%;
+
+    /* Secondary: Red from logo */
+    --secondary: 0 65% 53%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent: Golden yellow from logo */
+    --accent: 45 98% 57%;
+    --accent-foreground: 220 60% 8%;
+
+    /* Dark: Navy blue from logo */
+    --dark: 220 60% 8%;
+    --dark-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 15% 45%;
+
+    --destructive: 0 65% 53%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 25% 88%;
+    --input: 210 25% 88%;
+    --ring: 210 65% 52%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(210 65% 52%) 0%, hsl(210 65% 42%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(0 65% 53%) 0%, hsl(45 98% 57%) 100%);
+    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    
+    --shadow-soft: 0 2px 20px -2px hsl(210 65% 52% / 0.15);
+    --shadow-medium: 0 8px 30px -4px hsl(210 65% 52% / 0.2);
+    --shadow-strong: 0 12px 40px -8px hsl(210 65% 52% / 0.3);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 60% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 50% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 50% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 210 65% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 65% 53%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 45 98% 57%;
+    --accent-foreground: 220 60% 8%;
+
+    --muted: 220 50% 15%;
+    --muted-foreground: 210 20% 65%;
+
+    --destructive: 0 65% 53%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 40% 20%;
+    --input: 220 40% 20%;
+    --ring: 210 65% 52%;
+  }
+
+  #lovable-badge {
+    display: none !important;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .gradient-light {
+    background: var(--gradient-light);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+
+  .dot-background {
+    /* background-color: #fffbeb; Fundo creme suave */
+    /* Cria o padrão de pontos */
+    background-image: radial-gradient(#d8d2d1 1.5px, transparent 1.5px);
+    background-size: 30px 30px; /* Espaçamento dos pontos */
+  }
+
+  .wave-divider {
+    position: absolute;
+    /* Mudança chave: Posiciona na parte inferior do container pai, não abaixo dele */
+    bottom: -1px; /* -1px ajuda a cobrir qualquer linha de pixel residual em algumas telas */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+    pointer-events: none; /* Garante que não interfira em cliques na seção abaixo */
+  }
+
+  .wave-svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto; /* Deixe a altura escalar proporcionalmente ou defina uma altura fixa se preferir, ex: 120px */
+    /* O TRUQUE MÁGICO: Inverte o SVG verticalmente */
+    transform: scaleY(-1);
+  }
+
+  .style-topo {
+    background-color: #f8fafc;
+    color: #334155;
+  }
+  .topo-lines {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      opacity: 0.4; /* Bem sutil */
+  }
+  .topo-path {
+      fill: none;
+      stroke: #94a3b8; /* Cinza azulado */
+      stroke-width: 1.5;
+      vector-effect: non-scaling-stroke;
+  }
+
+  .style-grid {
+    background-color: #fff;
+    /* Cria o papel milimetrado/grid */
+    background-image: 
+        linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px; /* Tamanho do quadrado */
+  }
+  /* Círculo decorativo de linha fina */
+  .circle-accent {
+      position: absolute;
+      border: 2px solid #0ea5e9;
+      border-radius: 50%;
+      opacity: 0.5;
+      z-index: 1;
+  }
+  .c-1 { top: -100px; right: -50px; width: 400px; height: 400px; border-style: solid; }
+  .c-2 { bottom: 50px; left: -100px; width: 300px; height: 300px; border-style: dashed; }
+
+
+  .style-dash {
+    background-color: #eff6ff; /* Azul muito claro */
+  }
+  .dash-svg {
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      top: -10%; left: -10%;
+      z-index: 1;
+  }
+  .dash-path {
+      fill: none;
+      stroke: #3b82f6; /* Azul primário */
+      stroke-width: 2;
+      stroke-dasharray: 10, 15; /* Cria o tracejado */
+      opacity: 0.15;
+      animation: dashMove 60s linear infinite;
+  }
+  @keyframes dashMove {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: 1000; }
+  }
+}
