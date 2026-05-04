@@ -195,7 +195,7 @@ const Projects = () => {
             }`}
           >
             <div className="mb-12 text-center">
-              <h2 className="mb-4 text-foreground">Programa Asmara</h2>
+              <h2 className="mb-4 text-foreground">Programa Gerando Falcões (ASMARA)</h2>
               <p className="text-xl text-muted-foreground">
                 Empoderando mulheres através do empreendedorismo
               </p>

@@ -34,14 +34,10 @@ const Home = () => {
           <div className="container mx-auto px-4 animate-fade-in">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-left">
-                <h1
-                  className="mb-6 text-white"
-                >
+                <h1 className="mb-6 text-white">
                   Transforme Vidas. Doe Esperança.
                 </h1>
-                <p
-                  className="mb-8 text-xl text-white/90 leading-relaxed"
-                >
+                <p className="mb-8 text-xl text-white/90 leading-relaxed">
                   <strong>Juntos, podemos mudar o futuro!</strong> A Casa dos
                   Arcanjos transforma vidas através do esporte, educação e
                   empreendedorismo.{" "}
@@ -49,8 +45,7 @@ const Home = () => {
                     Cada real doado constrói esperança e abre portas.
                   </strong>
                 </p>
-                <div
-                  className="flex flex-col gap-4 sm:flex-row">
+                <div className="flex flex-col gap-4 sm:flex-row">
                   <Button
                     asChild
                     variant="warm"
@@ -154,8 +149,8 @@ const Home = () => {
                     Missão
                   </h3>
                   <p className="text-muted-foreground text-center">
-                    Transformar vidas através do desenvolvimento integral de
-                    pessoas em vulnerabilidade.
+                    Promover o desenvolvimento de crianças e adolescentes, com
+                    suporte em um ambiente seguro e acolhedor.
                   </p>
                 </CardContent>
               </Card>

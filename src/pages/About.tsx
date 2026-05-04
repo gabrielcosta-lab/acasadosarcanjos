@@ -165,18 +165,15 @@ const About = () => {
                 {/* Texto à esquerda */}
                 <div className="space-y-4 text-left">
                   <p className="text-xl text-muted-foreground">
-                    Transformar vidas através do desenvolvimento integral de
-                    crianças, adolescentes e mulheres em situação de
-                    vulnerabilidade social, promovendo cidadania, educação e
-                    autonomia por meio do esporte, empreendedorismo e
-                    capacitação profissional.
+                    Promover o desenvolvimento integral dessas crianças e
+                    adolescentes, oferecendo o suporte necessário para que elas
+                    possam alcançar todo o seu potencial.
                   </p>
                   <p className="text-xl text-muted-foreground">
-                    Acreditamos que cada indivíduo tem direito a oportunidades
-                    justas e ao desenvolvimento de seu pleno potencial.
-                    Trabalhamos todos os dias para que nossos beneficiados se
-                    tornem protagonistas de suas histórias e agentes de mudança
-                    em suas comunidades.
+                    Acreditamos que cada jovem possui habilidades únicas e
+                    merece a oportunidade de uma vida digna e próspera. Buscamos
+                    assim, criar um ambiente seguro, inclusivo e acolhedor, onde
+                    possam crescer emocional, social e intelectualmente.
                   </p>
                 </div>
 
@@ -218,10 +215,12 @@ const About = () => {
                     Visão
                   </h3>
                   <p className="text-muted-foreground">
-                    Ser referência nacional em projetos sociais que geram
-                    impacto real e duradouro, formando cidadãos conscientes e
-                    protagonistas de suas histórias, reconhecidos pela
-                    excelência na transformação de comunidades vulneráveis.
+                    Transformar realidades e construir um futuro próspero para
+                    essas crianças e adolescentes. Desejamos que cada um deles
+                    se torne um cidadão consciente, capacitado e capaz de
+                    contribuir positivamente para a sociedade. Além disso,
+                    buscamos fortalecer a comunidade como um todo, promovendo a
+                    solidariedade e a compreensão mútua.
                   </p>
                 </CardContent>
               </Card>
