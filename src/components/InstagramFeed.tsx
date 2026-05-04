@@ -4,16 +4,24 @@ import { Instagram } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 
+import feed1 from "@/assets/instagramFeedImg/feed1.png";
+import feed2 from "@/assets/instagramFeedImg/feed2.png";
+import feed3 from "@/assets/instagramFeedImg/feed3.png";
+import feed4 from "@/assets/instagramFeedImg/feed4.png";
+import feed5 from "@/assets/instagramFeedImg/feed5.png";
+import feed6 from "@/assets/instagramFeedImg/feed6.png";
+
+
 const InstagramFeed = () => {
   const sectionRef = useScrollAnimation();
 
   const instagramPosts = [
-    { id: 1, image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=500&fit=crop", likes: 234 },
-    { id: 2, image: "https://images.unsplash.com/photo-1528892677828-8862216f3665?w=400&h=600&fit=crop", likes: 456 },
-    { id: 3, image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=450&fit=crop", likes: 189 },
-    { id: 4, image: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?w=400&h=550&fit=crop", likes: 567 },
-    { id: 5, image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=500&fit=crop", likes: 345 },
-    { id: 6, image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop", likes: 678 },
+    { id: 1, image: feed1, likes: 234 },
+    { id: 2, image: feed2, likes: 456 },
+    { id: 3, image: feed3, likes: 189 },
+    { id: 4, image: feed4, likes: 567 },
+    { id: 5, image: feed5, likes: 345 },
+    { id: 6, image: feed6, likes: 678 },
   ];
 
   // Split posts into two columns for masonry effect
